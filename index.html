@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg" style="background-color: #DD5E89;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+  </nav>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-3">
+        <div class="d-flex justify-content-left" > <h2>Te recomendamos</h2></div>
+      </div> 
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-6">  
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <img src="imagenes/1.jpg" alt="">
+                <h5 class="card-title">Html</h5>
+                <p class="card-text">Se utiliza para estructurar y desplegar una página web y sus contenidos.</p>
+              </div>
+            </div>
+          </div><br>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <img src="imagenes/2.jpg" alt="">
+                <h5 class="card-title">JavaScript</h5>
+                <p class="card-text">JavaScript pueden mejorar la experiencia del usuario de un sitio web.</p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center" > <h2>Estamos ubicados</h2></div> 
+          <br>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3978.048071342854!2d-75.15061924894002!3d4.402108269835494!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38daac36ef33ef%3A0xc4167c4b60b14a15!2sSENA%20Centro%20de%20Industria%20y%20de%20la%20Construcci%C3%B3n!5e0!3m2!1ses!2sco!4v1670803712236!5m2!1ses!2sco" width="650" height="330" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div> <br>
+        
+        
+      </div>
+
+      <div class="col-sm-12 col-md-6" >
+        <form action="" class="form" id="form" autocomplete="off">
+          <!-- <p class="titulo">Regístrate</p> -->
+          <h1>Regístrate</h1>
+
+          <div class="form-input dni">
+            <label for="dni">Identificacion</label>
+            <input type="number" id="dni" onblur="validarid()" required>
+            <div id="Ridentificacion"></div>
+            <p class="mensajeError"></p>
+          </div>
+
+          <div class="form-input myname">
+            <label for="myname">Nombre</label>
+            <input type="text" id="myname" required>
+            <p class="mensajeError"></p>
+          </div>
+
+          <div class="form-input surname">
+            <label for="surname">Apellido</label>
+            <input type="text" id="surname" required>
+            <p class="mensajeError"></p>
+          </div>
+
+          <div class="form-input date">
+            <label for="date">Fecha Nacimiento</label>
+            <input type="date" id="FechaNacimiento" min="1930-01-01" max="2022-12-31" required>
+            <p id="edad"> </p>
+          </div>
+
+          <div class="genero">
+            <label for="genero">Genero: </label>
+            <select name="" id="genero" required> 
+              <option value="1">Mujer</option>
+              <option value="2">Hombre</option>
+              <option value="3">Otro</option>
+            </select>
+            <p class="mensajeError"></p>
+          </div>
+
+          <div class="form-input email">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" required>
+            <p class="mensajeError"></p>
+          </div>
+
+          <div class="form-input password">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" required>
+            <p class="mensajeError"></p>
+          </div>
+
+          <div class="form-input repeatPassword">
+            <label for="repeatPassword">Repetir Contraseña</label>
+            <input type="password" id="repeatPassword" required>
+            <p class="mensajeError"></p>
+          </div>
+
+          <div class="form-boton" >
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+          </div>
+          <p class="mensajeCorrecto"></p>
+        </form>
+      </div>
+    </div>
+    
+  </div>
+    
+  <script src="bootstrap/js/bootstrap.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

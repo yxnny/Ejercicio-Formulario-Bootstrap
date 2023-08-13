@@ -1,0 +1,134 @@
+body{
+  background: #1D2B64;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #F8CDDA, #1D2B64);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #F8CDDA, #1D2B64); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  font-family: sans-serif;
+}
+
+
+:root { 
+  --cnegro: black;
+  --ctexto: rgb(0, 0, 0);
+  --cblanco: white;
+  --error: rgb(184, 31, 31);
+}
+  
+[type="checkbox"] {
+    display: none;
+}
+  
+/* ---- FORMULARIO ---- */
+
+.genero{
+  color: var(--ctexto); 
+  
+}
+select{
+  background: none;
+  color: #000000;
+  font-size: 18px;
+  padding: 2px 2px 2px 2px;
+  border: none;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.form {
+  background: #E55D87;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #5FC3E4, #E55D87);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* border: 3px solid green; */
+  
+  padding: 20px 30px;
+  margin: auto;
+  margin-top: 10px;
+  
+}
+h1{
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+ 
+}
+/* .titulo {
+  font-weight: bold;
+  font-size: 28px;
+  text-align: center;
+  margin: 0;
+} */
+  
+.form-input {
+  margin-bottom: 30px;
+  
+}
+
+.form-input label {
+  display: block;
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--ctexto);
+}
+  
+.form-input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: none;
+  border-bottom: 1px solid var(--ctexto);
+  
+}
+  
+.form-input input:focus + label {
+  font-weight: bold;
+  color: var(--cnegro);
+}
+  
+.form-termsAndConditions {
+  margin-left: 10px;
+  position: relative;
+  color: var(--ctexto);
+  font-size: 13px;
+}
+  
+.form-termsAndConditions label::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--cnegro);
+  position: absolute;
+  left: -14px;
+}
+  
+.form-boton input {
+  background: var(--cnegro);
+  color: var(--cblanco);
+  padding: 10px 30px;
+  font-size: 15px;
+  margin: auto;
+  margin-top: 10px;
+  border: none;
+}
+  
+.form-boton input:hover {
+  background: var(--ctextoDark);
+  transition: 0.5s;
+}
+  
+.mensajeError {
+  color: var(--error);
+  margin-top: 0px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+  
+.mensajeCorrecto {
+  text-align: center;
+  font-weight: bold;
+}
+
+h2{
+  color: white;
+}
